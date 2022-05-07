@@ -211,7 +211,7 @@ function updateList (checksum, ipfsHash) {
   } else {
     var gatewayPort = node[node.default].gateway
   }
-  document.getElementById(checksum).innerHTML = '<strong class="fileName"><a href="' + node[node.default].protocol + '://' + node[node.default].address + ':' + gatewayPort + '/ipfs/' + ipfsHash + '" class="uploaded" target="_blank">' + filesOk[i].name + ' <img src="img/link.png" width="12px"/></a></strong>' +
+  document.getElementById(checksum).innerHTML = '<strong class="fileName"><a href="' + node[node.default].protocol + '://' + node[node.default].address + ':' + gatewayPort + '/ipfs/' + ipfsHash + '?filename='+ filesOk[i].name +'" class="uploaded" target="_blank">' + filesOk[i].name + ' <img src="img/link.png" width="12px"/></a></strong>' +
   '</a></spam><br> <spam id="fileProperties"> (' + (filesOk[i].type || 'n/a' ) +') - ' + filesOk[i].size + ' bytes, last modified: ' + new Date(filesOk[i].lastModified).toLocaleDateString() +'</spam>'
 }
 
